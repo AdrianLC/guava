@@ -8,4 +8,4 @@ max_buffer_size = 1000                  # Maximum event items in buffer before a
 frequency = 60000                       # Flush frequency in milliseconds
 frequency_in_testmode = 1000            # Flush frequency in test mode in milliseconds
 concurrency_level = 5                   # Dispatcher concurrency level
-close_timeout = 120                     # Close timeout in Seconds.
+close_timeout = 240                     # Close timeout in Seconds.
