@@ -219,6 +219,7 @@
             <!-- Set max heap for tests. -->
             <!-- Catch dependencies on the default locale by setting it to hi-IN. -->
             <argLine>-Xmx1536M  -Duser.language=hi -Duser.country=IN -javaagent:${settings.localRepository}/com/undefinedlabs/scope/scope-agent/${scope.agent.version}/scope-agent-${scope.agent.version}.jar</argLine>
+
           </configuration>
         </plugin>
         <plugin>
