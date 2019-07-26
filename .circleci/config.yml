@@ -14,7 +14,7 @@ jobs:
           name: Save Scope Logs
           command: |
             mkdir -p /tmp/scope_logs
-            mv scope*.log /tmp/scope_logs
+            mv /var/log/scope/scope*.log /tmp/scope_logs
           when: always
       - store_artifacts:
           path: /tmp/scope_logs
