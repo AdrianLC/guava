@@ -18,6 +18,7 @@
     <animal.sniffer.version>1.18</animal.sniffer.version>
     <maven-javadoc-plugin.version>3.1.0</maven-javadoc-plugin.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <scope.agent.version>0.1.8-beta.5</scope.agent.version>
   </properties>
   <issueManagement>
     <system>GitHub Issues</system>
@@ -217,7 +218,8 @@
             <runOrder>alphabetical</runOrder>
             <!-- Set max heap for tests. -->
             <!-- Catch dependencies on the default locale by setting it to hi-IN. -->
-            <argLine>-Xmx1536M -Duser.language=hi -Duser.country=IN</argLine>
+            <argLine>-Xmx1536M  -Duser.language=hi -Duser.country=IN -javaagent:${settings.localRepository}/com/undefinedlabs/scope/scope-agent/${scope.agent.version}/scope-agent-${scope.agent.version}.jar</argLine>
+
           </configuration>
         </plugin>
         <plugin>
@@ -332,6 +334,14 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>com.undefinedlabs.scope</groupId>
+      <artifactId>scope-agent</artifactId>
+      <version>${scope.agent.version}</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
   <profiles>
     <profile>
         <id>sonatype-oss-release</id>
